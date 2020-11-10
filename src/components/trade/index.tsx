@@ -75,7 +75,7 @@ export const TradeEntry = () => {
     <>
       <div>
         <CurrencyInput
-          title="Input"
+          title="支付"
           onInputChange={(val: any) => {
             if (A.amount !== val) {
               setLastTypedAccount(A.mintAddress);
@@ -93,7 +93,7 @@ export const TradeEntry = () => {
           ⇅
         </Button>
         <CurrencyInput
-          title="To (Estimate)"
+          title="获取 (预估)"
           onInputChange={(val: any) => {
             if (B.amount !== val) {
               setLastTypedAccount(B.mintAddress);

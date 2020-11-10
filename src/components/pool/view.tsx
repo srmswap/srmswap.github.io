@@ -66,7 +66,7 @@ export const PoolAccounts = () => {
         renderEmpty={() => (
           <Empty
             image={Empty.PRESENTED_IMAGE_SIMPLE}
-            description="No liquidity found."
+            description="暂无流动性"
           />
         )}
       >

@@ -11,14 +11,14 @@ export const Settings = () => {
   return (
     <>
       <div>
-        Transactions: Settings:
+        交易设置:
         <div>
-          Slippage:
+          滑点:
           <Slippage />
         </div>
       </div>
       <div style={{ display: "grid" }}>
-        Network:{" "}
+        网络:{" "}
         <Select
           onSelect={setEndpoint}
           value={endpoint}
@@ -32,7 +32,7 @@ export const Settings = () => {
         </Select>
       </div>
       <div style={{ display: "grid" }}>
-        Wallet:{" "}
+        钱包:{" "}
         <Select onSelect={setProvider} value={providerUrl}>
           {WALLET_PROVIDERS.map(({ name, url }) => (
             <Select.Option value={url} key={url}>

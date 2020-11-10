@@ -20,7 +20,7 @@ export const AppBar = (props: { left?: JSX.Element; right?: JSX.Element }) => {
                 pathname: "/",
               }}
             >
-              Swap
+              SRMSwap
             </Link>
           </Menu.Item>
           <Menu.Item key="/info">
@@ -29,7 +29,7 @@ export const AppBar = (props: { left?: JSX.Element; right?: JSX.Element }) => {
                 pathname: "/info",
               }}
             >
-              Charts
+              图表
             </Link>
           </Menu.Item>
           <Menu.Item key="trade">
@@ -38,7 +38,7 @@ export const AppBar = (props: { left?: JSX.Element; right?: JSX.Element }) => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              Trade
+              交易
               <sup>↗</sup>
             </a>
           </Menu.Item>
