@@ -1,12 +1,12 @@
 {
   "files": {
     "main.css": "/srmswap.github.io/static/css/main.2a3a3d4e.chunk.css",
-    "main.js": "/srmswap.github.io/static/js/main.4bfdd89b.chunk.js",
+    "main.js": "/srmswap.github.io/static/js/main.fcccd8e6.chunk.js",
     "runtime-main.js": "/srmswap.github.io/static/js/runtime-main.8807816e.js",
     "static/css/2.b5a80ab8.chunk.css": "/srmswap.github.io/static/css/2.b5a80ab8.chunk.css",
     "static/js/2.97424c1b.chunk.js": "/srmswap.github.io/static/js/2.97424c1b.chunk.js",
     "index.html": "/srmswap.github.io/index.html",
-    "precache-manifest.762cef7695cb74820b147fb5d0a7dca6.js": "/srmswap.github.io/precache-manifest.762cef7695cb74820b147fb5d0a7dca6.js",
+    "precache-manifest.5d9d2750e42aa0a475d94b4dfee64ed2.js": "/srmswap.github.io/precache-manifest.5d9d2750e42aa0a475d94b4dfee64ed2.js",
     "service-worker.js": "/srmswap.github.io/service-worker.js",
     "static/js/2.97424c1b.chunk.js.LICENSE.txt": "/srmswap.github.io/static/js/2.97424c1b.chunk.js.LICENSE.txt"
   },
@@ -15,6 +15,6 @@
     "static/css/2.b5a80ab8.chunk.css",
     "static/js/2.97424c1b.chunk.js",
     "static/css/main.2a3a3d4e.chunk.css",
-    "static/js/main.4bfdd89b.chunk.js"
+    "static/js/main.fcccd8e6.chunk.js"
   ]
 }
