@@ -53,7 +53,7 @@ export const AppBar = (props: { left?: JSX.Element; right?: JSX.Element }) => {
             content={<PoolAccounts />}
             trigger="click"
           >
-            <Button type="text">My Pools</Button>
+            <Button type="text">我的做市</Button>
           </Popover>
         )}
         <div>
@@ -64,7 +64,7 @@ export const AppBar = (props: { left?: JSX.Element; right?: JSX.Element }) => {
               onClick={connected ? wallet.disconnect : wallet.connect}
               style={{ color: "#2abdd2" }}
             >
-              Connect
+              连接钱包
             </Button>
           )}
           {connected && (

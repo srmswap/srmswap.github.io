@@ -121,7 +121,7 @@ export const AddToLiquidity = () => {
           </div>
         }
       >
-        <Button type="text">关于提供流动性</Button>
+        <Button type="text">关于成为流动性做市商赚取收益</Button>
       </Popover>
 
       <CurrencyInput

@@ -8,7 +8,7 @@ function App() {
     <div className="App">
       <div className="Banner">
         <div className="Banner-description">
-          Swap is unaudited software. Use at your own risk.
+          SRMSwap暂未完成代码审计，请自行承担潜在风险。
         </div>
       </div>
       <Routes />

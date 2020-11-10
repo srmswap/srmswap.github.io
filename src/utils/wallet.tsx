@@ -24,9 +24,9 @@ export function WalletProvider({ children = null as any }) {
 
   const [connected, setConnected] = useState(false);
   useEffect(() => {
-    console.log("trying to connect");
+    console.log("正在连接您的钱包...");
     wallet.on("connect", () => {
-      console.log("connected");
+      console.log("已连接");
       setConnected(true);
       let walletPublicKey = wallet.publicKey.toBase58();
       let keyToDisplay =
@@ -38,15 +38,15 @@ export function WalletProvider({ children = null as any }) {
           : walletPublicKey;
 
       notify({
-        message: "Wallet update",
-        description: "Connected to wallet " + keyToDisplay,
+        message: "钱包更新",
+        description: "已连接到钱包： " + keyToDisplay,
       });
     });
     wallet.on("disconnect", () => {
       setConnected(false);
       notify({
-        message: "Wallet update",
-        description: "Disconnected from wallet",
+        message: "钱包更新",
+        description: "已断开钱包连接",
       });
     });
     return () => {

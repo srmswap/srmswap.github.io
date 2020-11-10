@@ -174,7 +174,7 @@ export const useCurrencyPairState = () => {
   return context as CurrencyPairContextState;
 };
 function getDefaultTokens(env: ENV, search: string) {
-  let defaultBase = "BTC";
+  let defaultBase = "ETH";
   let defaultQuote = "USDT";
 
   console.log(search);
