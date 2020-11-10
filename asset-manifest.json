@@ -1,12 +1,12 @@
 {
   "files": {
     "main.css": "/srmswap.com/static/css/main.2a3a3d4e.chunk.css",
-    "main.js": "/srmswap.com/static/js/main.4f9d88b4.chunk.js",
+    "main.js": "/srmswap.com/static/js/main.a063b517.chunk.js",
     "runtime-main.js": "/srmswap.com/static/js/runtime-main.1091b5f1.js",
     "static/css/2.b5a80ab8.chunk.css": "/srmswap.com/static/css/2.b5a80ab8.chunk.css",
     "static/js/2.5d620ece.chunk.js": "/srmswap.com/static/js/2.5d620ece.chunk.js",
     "index.html": "/srmswap.com/index.html",
-    "precache-manifest.6739418c869f9683dfd87ecc42995458.js": "/srmswap.com/precache-manifest.6739418c869f9683dfd87ecc42995458.js",
+    "precache-manifest.58ae37b75c855a576c11a461aa363ec1.js": "/srmswap.com/precache-manifest.58ae37b75c855a576c11a461aa363ec1.js",
     "service-worker.js": "/srmswap.com/service-worker.js",
     "static/js/2.5d620ece.chunk.js.LICENSE.txt": "/srmswap.com/static/js/2.5d620ece.chunk.js.LICENSE.txt"
   },
@@ -15,6 +15,6 @@
     "static/css/2.b5a80ab8.chunk.css",
     "static/js/2.5d620ece.chunk.js",
     "static/css/main.2a3a3d4e.chunk.css",
-    "static/js/main.4f9d88b4.chunk.js"
+    "static/js/main.a063b517.chunk.js"
   ]
 }

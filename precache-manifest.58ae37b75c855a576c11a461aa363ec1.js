@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "63db55ba85fb8b24e438a216e768a70c",
+    "revision": "1e712dcba67382b785981e850958e549",
     "url": "/srmswap.com/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/srmswap.com/static/css/2.b5a80ab8.chunk.css"
   },
   {
-    "revision": "909901c1379f034296a0",
+    "revision": "9f720361d885f1e1f6f4",
     "url": "/srmswap.com/static/css/main.2a3a3d4e.chunk.css"
   },
   {
@@ -20,8 +20,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/srmswap.com/static/js/2.5d620ece.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "909901c1379f034296a0",
-    "url": "/srmswap.com/static/js/main.4f9d88b4.chunk.js"
+    "revision": "9f720361d885f1e1f6f4",
+    "url": "/srmswap.com/static/js/main.a063b517.chunk.js"
   },
   {
     "revision": "214caebf073bd5df07ae",
