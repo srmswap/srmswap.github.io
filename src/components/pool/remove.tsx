@@ -37,7 +37,7 @@ export const RemoveLiquidity = (props: {
   return (
     <>
       <Button type="default" onClick={onRemove} disabled={pendingTx}>
-        Remove
+        取回
       </Button>
     </>
   );

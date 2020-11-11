@@ -76,21 +76,21 @@ export const PoolAccounts = () => {
 
   return (
     <>
-      <div>Your Liquidity</div>
+      <div>您的做市</div>
       <ConfigProvider
         renderEmpty={() => (
           <Empty
             image={Empty.PRESENTED_IMAGE_SIMPLE}
-            description="暂无流动性"
+            description="暂无流动性做市"
           />
         )}
       >
         <div className="pools-grid">
           <div className="pool-item-header">
             <div style={{ width: 48 }} />
-            <div className="pool-item-name">Pool</div>
-            <div className="pool-item-amount">Liquidity</div>
-            <div className="pool-item-amount">Fees</div>
+            <div className="pool-item-name">做市</div>
+            <div className="pool-item-amount">资金</div>
+            <div className="pool-item-amount">收益</div>
             <div className="pool-item-type" />
             <div />
           </div>

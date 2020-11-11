@@ -136,7 +136,7 @@ export const AddToLiquidity = () => {
         </Popover>
 
         <CurrencyInput
-          title="Input"
+          title="输入"
           onInputChange={(val: any) => {
             setPoolOperation(PoolOperation.Add);
             if (A.amount !== val) {
@@ -152,7 +152,7 @@ export const AddToLiquidity = () => {
         />
         <div>+</div>
         <CurrencyInput
-          title="Input"
+          title="输入"
           onInputChange={(val: any) => {
             setPoolOperation(PoolOperation.Add);
             if (B.amount !== val) {

@@ -132,7 +132,7 @@ export const ChartsView = React.memo(() => {
 
   const columns = [
     {
-      title: "Name",
+      title: "名称",
       dataIndex: "name",
       key: "name",
       render(text: string, record: any) {
@@ -152,7 +152,7 @@ export const ChartsView = React.memo(() => {
       },
     },
     {
-      title: "Liquidity",
+      title: "做市",
       dataIndex: "liquidity",
       key: "liquidity",
       render(text: string, record: any) {
@@ -172,7 +172,7 @@ export const ChartsView = React.memo(() => {
       defaultSortOrder: "descend" as any,
     },
     {
-      title: "Supply",
+      title: "供应量",
       dataIndex: "supply",
       key: "supply",
       render(text: string, record: any) {
@@ -186,7 +186,7 @@ export const ChartsView = React.memo(() => {
       sorter: (a: any, b: any) => a.supply - b.supply,
     },
     {
-      title: "Volume",
+      title: "交易量",
       dataIndex: "volume",
       key: "volume",
       render(text: string, record: any) {
@@ -205,7 +205,7 @@ export const ChartsView = React.memo(() => {
       sorter: (a: any, b: any) => a.volume - b.volume,
     },
     {
-      title: "Fees",
+      title: "收益",
       dataIndex: "fees",
       key: "fees",
       render(text: string, record: any) {
@@ -234,7 +234,7 @@ export const ChartsView = React.memo(() => {
       sorter: (a: any, b: any) => a.apy - b.apy,
     },
     {
-      title: "Address",
+      title: "地址",
       dataIndex: "address",
       key: "address",
       render(text: string, record: any) {
@@ -268,8 +268,8 @@ export const ChartsView = React.memo(() => {
         }
       />
       <div className="info-header">
-        <h1>Liquidity: {formatUSD.format(totals.liquidity)}</h1>
-        <h1>Volume: {formatUSD.format(totals.volume)}</h1>
+        <h1>总做市: {formatUSD.format(totals.liquidity)}</h1>
+        <h1>总交易: {formatUSD.format(totals.volume)}</h1>
         <Search
           className="search-input"
           placeholder="Filter"

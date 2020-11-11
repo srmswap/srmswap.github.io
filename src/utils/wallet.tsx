@@ -38,14 +38,14 @@ export function WalletProvider({ children = null as any }) {
           : walletPublicKey;
 
       notify({
-        message: "钱包更新",
+        message: "钱包状态",
         description: "已连接到钱包： " + keyToDisplay,
       });
     });
     wallet.on("disconnect", () => {
       setConnected(false);
       notify({
-        message: "钱包更新",
+        message: "钱包状态",
         description: "已断开钱包连接",
       });
     });
