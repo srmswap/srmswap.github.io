@@ -20,7 +20,7 @@ export const AppBar = (props: { left?: JSX.Element; right?: JSX.Element }) => {
                 pathname: "/",
               }}
             >
-              Swap
+              SRMSwap
             </Link>
           </Menu.Item>
           <Menu.Item key="/info">
@@ -29,7 +29,7 @@ export const AppBar = (props: { left?: JSX.Element; right?: JSX.Element }) => {
                 pathname: "/info",
               }}
             >
-              Charts
+              图表
             </Link>
           </Menu.Item>
           <Menu.Item key="trade">
@@ -38,7 +38,7 @@ export const AppBar = (props: { left?: JSX.Element; right?: JSX.Element }) => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              Trade
+              交易
               <sup>↗</sup>
             </a>
           </Menu.Item>
@@ -48,7 +48,7 @@ export const AppBar = (props: { left?: JSX.Element; right?: JSX.Element }) => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              Help
+              帮助
               <sup>↗</sup>
             </a>
           </Menu.Item>
@@ -63,7 +63,7 @@ export const AppBar = (props: { left?: JSX.Element; right?: JSX.Element }) => {
             content={<PoolAccounts />}
             trigger="click"
           >
-            <Button type="text">My Pools</Button>
+            <Button type="text">我的做市</Button>
           </Popover>
         )}
         <div>
@@ -74,7 +74,7 @@ export const AppBar = (props: { left?: JSX.Element; right?: JSX.Element }) => {
               onClick={connected ? wallet.disconnect : wallet.connect}
               style={{ color: "#2abdd2" }}
             >
-              Connect
+              连接钱包
             </Button>
           )}
           {connected && (

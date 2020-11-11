@@ -96,7 +96,7 @@ export const AddToLiquidity = () => {
       onClick={executeAction}
       disabled={
         connected &&
-        (pendingTx || !A.account || !B.account || A.account === B.account)
+        (pendingTx || !A.account || !B.account || A.account  B.account)
       }
       type="primary"
       size="large"
@@ -122,63 +122,52 @@ export const AddToLiquidity = () => {
   );
 
   return (
-    <>
-      <div className="input-card">
-        <Popover
-          trigger="hover"
-          content={
-            <div style={{ width: 300 }}>
-              Liquidity providers earn a fixed percentage fee on all trades
-              proportional to their share of the pool. Fees are added to the
-              pool, accrue in real time and can be claimed by withdrawing your
-              liquidity.
-            </div>
-          }
-        >
-          <Button type="text">Read more about providing liquidity.</Button>
-        </Popover>
+    <div>
+      <Popover
+        trigger="hover"
+        content={
+          <div style={{ width: 300 }}>
+            流动性提供者在每个交易中按流动池占比赚取固定比例的费用。费用会实时添加到池中，并且可以通过提取流动性资金来获取。
+          </div>
+        }
+      >
+        <Button type="text">关于成为流动性做市商赚取收益</Button>
+      </Popover>
 
-        <CurrencyInput
-          title="Input"
-          onInputChange={(val: any) => {
-            setPoolOperation(PoolOperation.Add);
-            if (A.amount !== val) {
-              setLastTypedAccount(A.mintAddress);
-            }
-            A.setAmount(val);
-          }}
-          amount={A.amount}
-          mint={A.mintAddress}
-          onMintChange={(item) => {
-            A.setMint(item);
-          }}
-        />
-        <div>+</div>
-        <CurrencyInput
-          title="Input"
-          onInputChange={(val: any) => {
-            setPoolOperation(PoolOperation.Add);
-            if (B.amount !== val) {
-              setLastTypedAccount(B.mintAddress);
-            }
-            B.setAmount(val);
-          }}
-          amount={B.amount}
-          mint={B.mintAddress}
-          onMintChange={(item) => {
-            B.setMint(item);
-          }}
-        />
-        <SupplyOverview
-          mintAddress={[A.mintAddress, B.mintAddress]}
-          pool={pool}
-        />
-        <PoolAddress
-          pool={pool}
-          style={{ marginBottom: 10 }}
-          showLabel={true}
-        />
-      </div>
+      <CurrencyInput
+        title="Input"
+        onInputChange={(val: any) => {
+          if (A.amount !== val) {
+            setLastTypedAccount(A.mintAddress);
+          }
+          A.setAmount(val);
+        }}
+        amount={A.amount}
+        mint={A.mintAddress}
+        onMintChange={(item) => {
+          A.setMint(item);
+        }}
+      />
+      <div>+</div>
+      <CurrencyInput
+        title="Input"
+        onInputChange={(val: any) => {
+          if (B.amount !== val) {
+            setLastTypedAccount(B.mintAddress);
+          }
+
+          B.setAmount(val);
+        }}
+        amount={B.amount}
+        mint={B.mintAddress}
+        onMintChange={(item) => {
+          B.setMint(item);
+        }}
+      />
+      <SupplyOverview
+        mintAddress={[A.mintAddress, B.mintAddress]}
+        pool={pool}
+      />
       {pool && (
         <Button
           className="add-button"

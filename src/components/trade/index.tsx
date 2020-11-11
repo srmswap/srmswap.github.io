@@ -92,7 +92,7 @@ export const TradeEntry = () => {
     <>
       <div className="input-card">
         <CurrencyInput
-          title="Input"
+          title="支付"
           onInputChange={(val: any) => {
             setPoolOperation(PoolOperation.SwapGivenInput);
             if (A.amount !== val) {
@@ -111,7 +111,7 @@ export const TradeEntry = () => {
           ⇅
         </Button>
         <CurrencyInput
-          title="To (Estimate)"
+          title="获取 (预估)"
           onInputChange={(val: any) => {
             setPoolOperation(PoolOperation.SwapGivenProceeds);
             if (B.amount !== val) {

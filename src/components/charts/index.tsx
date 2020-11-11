@@ -28,6 +28,7 @@ const FlashText = (props: { text: string; val: number }) => {
   return <span className={activeClass}>{props.text}</span>;
 };
 
+
 interface Totals {
   liquidity: number;
   volume: number;

@@ -2,16 +2,16 @@ import { ENV } from "../utils/connection";
 import { CurrencyContextState } from "../utils/currencyPair";
 import { getTokenName } from "../utils/utils";
 
-export const CREATE_POOL_LABEL = "Create Liquidity Pool";
+export const CREATE_POOL_LABEL = "创建流动性池";
 export const INSUFFICIENT_FUNDS_LABEL = (tokenName: string) =>
-  `Insufficient ${tokenName} funds`;
+  `您的 ${tokenName} 余额不足`;
 export const POOL_NOT_AVAILABLE = (tokenA: string, tokenB: string) =>
-  `Pool ${tokenA}/${tokenB} doesn't exsist`;
-export const ADD_LIQUIDITY_LABEL = "Provide Liquidity";
-export const SWAP_LABEL = "Swap";
-export const CONNECT_LABEL = "Connect Wallet";
-export const SELECT_TOKEN_LABEL = "Select a token";
-export const ENTER_AMOUNT_LABEL = "Enter an amount";
+  `当前 ${tokenA}/${tokenB} 暂时无人做市`;
+export const ADD_LIQUIDITY_LABEL = "提供流动性";
+export const SWAP_LABEL = "兑换";
+export const CONNECT_LABEL = "连接钱包";
+export const SELECT_TOKEN_LABEL = "选择代币";
+export const ENTER_AMOUNT_LABEL = "在上面输入数量";
 
 export const generateActionLabel = (
   action: string,

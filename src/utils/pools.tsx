@@ -49,8 +49,8 @@ export const removeLiquidity = async (
   }
 
   notify({
-    message: "Removing Liquidity...",
-    description: "Please review transactions to approve.",
+    message: "取回流动性资产...",
+    description: "请检查并批准交易",
     type: "warn",
   });
 
@@ -141,7 +141,7 @@ export const removeLiquidity = async (
   );
 
   notify({
-    message: "Liquidity Returned. Thank you for your support.",
+    message: "流动性资产已取回，感谢您的支持！",
     type: "success",
     description: `Transaction - ${tx}`,
   });
@@ -262,7 +262,7 @@ export const swap = async (
   );
 
   notify({
-    message: "Trade executed.",
+    message: "已成功兑换",
     type: "success",
     description: `Transaction - ${tx}`,
   });
@@ -542,8 +542,8 @@ async function _addLiquidityExistingPool(
   wallet: any
 ) {
   notify({
-    message: "Adding Liquidity...",
-    description: "Please review transactions to approve.",
+    message: "增加流动性资产...",
+    description: "请检查并批准交易",
     type: "warn",
   });
 
@@ -676,7 +676,7 @@ async function _addLiquidityExistingPool(
   );
 
   notify({
-    message: "Pool Funded. Happy trading.",
+    message: "做市已成功，交易愉快！",
     type: "success",
     description: `Transaction - ${tx}`,
   });
@@ -860,8 +860,8 @@ async function _addLiquidityNewPool(
   options: PoolConfig
 ) {
   notify({
-    message: "Creating new pool...",
-    description: "Please review transactions to approve.",
+    message: "建立新的资金池...",
+    description: "请检查并批准交易",
     type: "warn",
   });
 
