@@ -71,7 +71,6 @@ export const CurrencyInput = (props: {
       return map;
     }, new Map<string, { account: TokenAccount; pool: PoolInfo | undefined }[]>());
 
-<<<<<<< HEAD
   const additionalAccounts = [...grouppedUserAccounts.keys()];
   if (tokens.findIndex((t) => t.mintAddress === props.mint) < 0 && props.mint && !grouppedUserAccounts.has(props?.mint)) {
     additionalAccounts.push(props.mint);
@@ -85,35 +84,14 @@ export const CurrencyInput = (props: {
         // TODO: group multple accounts of same time and select one with max amount
         const account = list[0];
         pool = account.pool;
-=======
-  // TODO: group multple accounts of same time and select one with max amount
-  const renderAdditionalTokens = [...grouppedUserAccounts.keys()].map(
-    (mint) => {
-      const list = grouppedUserAccounts.get(mint);
-      if (!list || list.length <= 0) {
-        return undefined;
-      }
-
-      const account = list[0];
-
-      if (account.account.info.amount.eqn(0)) {
-        return undefined;
->>>>>>> v1.0
       }
 
       let name: string;
       let icon: JSX.Element;
-<<<<<<< HEAD
       if (pool) {
         name = getPoolName(env, pool);
 
         const sorted = pool.pubkeys.holdingMints
-=======
-      if (account.pool) {
-        name = getPoolName(env, account.pool);
-
-        const sorted = account.pool.pubkeys.holdingMints
->>>>>>> v1.0
           .map((a: PublicKey) => a.toBase58())
           .sort();
         icon = <PoolIcon mintA={sorted[0]} mintB={sorted[1]} />;
@@ -124,14 +102,9 @@ export const CurrencyInput = (props: {
 
       return (
         <Option
-<<<<<<< HEAD
           key={mint}
           value={mint}
           name={name}
-=======
-          key={account.account.pubkey.toBase58()}
-          value={mint}
->>>>>>> v1.0
           title={mint}
         >
           <div key={mint} style={{ display: "flex", alignItems: "center" }}>
@@ -159,11 +132,7 @@ export const CurrencyInput = (props: {
   return (
     <Card
       className="ccy-input"
-<<<<<<< HEAD
       style={{ borderRadius: 20 }}
-=======
-      style={{ borderRadius: 20, margin: 15 }}
->>>>>>> v1.0
       bodyStyle={{ padding: 0 }}
     >
       <div className="ccy-input-header">
@@ -198,29 +167,18 @@ export const CurrencyInput = (props: {
         <div className="ccy-input-header-right" style={{ display: "felx" }}>
           <Select
             size="large"
-<<<<<<< HEAD
             showSearch
             style={{ minWidth: 120 }}
             placeholder="CCY"
             value={props.mint}
-=======
-            style={{ minWidth: 80 }}
-            placeholder="CCY"
-            value={props.mint}
-            dropdownMatchSelectWidth={true}
-            dropdownStyle={{ minWidth: 200 }}
->>>>>>> v1.0
             onChange={(item) => {
               if (props.onMintChange) {
                 props.onMintChange(item);
               }
             }}
-<<<<<<< HEAD
             filterOption={(input, option) =>
               option?.name?.toLowerCase().indexOf(input.toLowerCase()) >= 0
             }
-=======
->>>>>>> v1.0
           >
             {[...renderPopularTokens, ...renderAdditionalTokens]}
           </Select>
