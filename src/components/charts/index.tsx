@@ -1,4 +1,10 @@
-import React, { useCallback, useEffect, useRef, useState } from "react";
+import React, {
+  useCallback,
+  useEffect,
+  useMemo,
+  useRef,
+  useState,
+} from "react";
 import { Button, Popover, Table } from "antd";
 import { AppBar } from "./../appBar";
 import { Settings } from "../settings";
@@ -27,7 +33,6 @@ const FlashText = (props: { text: string; val: number }) => {
 
   return <span className={activeClass}>{props.text}</span>;
 };
-
 
 interface Totals {
   liquidity: number;
@@ -62,13 +67,14 @@ export const ChartsView = React.memo(() => {
   // const { ownedPools } = useOwnedPools();
 
   // TODO: create cache object with layout type, get, query, add
-
-  let searchRegex: RegExp;
-  try {
-    searchRegex = new RegExp(search, "i");
-  } catch {
-    // ignore bad regex typed by user
-  }
+  
+  let searchRegex: RegExp | undefined = useMemo(() => {
+    try {
+      return new RegExp(search, "i");
+    } catch {
+      // ignore bad regex typed by user
+    }
+  }, [search]);
 
   const updateChart = useCallback(() => {
     if (echartsRef.current) {
@@ -111,7 +117,7 @@ export const ChartsView = React.memo(() => {
         ],
       });
     }
-  }, [enriched, echartsRef.current, search]);
+  }, [enriched, search, searchRegex]);
 
   // Updates total values
   useEffect(() => {

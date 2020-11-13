@@ -1,6 +1,5 @@
-import { ENV } from "../utils/connection";
 import { CurrencyContextState } from "../utils/currencyPair";
-import { getTokenName } from "../utils/utils";
+import { getTokenName, KnownTokenMap } from "../utils/utils";
 
 export const CREATE_POOL_LABEL = "创建流动性池";
 export const INSUFFICIENT_FUNDS_LABEL = (tokenName: string) =>
@@ -16,7 +15,7 @@ export const ENTER_AMOUNT_LABEL = "在上面输入数量";
 export const generateActionLabel = (
   action: string,
   connected: boolean,
-  env: ENV,
+  tokenMap: KnownTokenMap,
   A: CurrencyContextState,
   B: CurrencyContextState,
   ignoreToBalance: boolean = false
@@ -32,8 +31,8 @@ export const generateActionLabel = (
     : !B.amount
     ? ENTER_AMOUNT_LABEL
     : !A.sufficientBalance()
-    ? INSUFFICIENT_FUNDS_LABEL(getTokenName(env, A.mintAddress))
+    ? INSUFFICIENT_FUNDS_LABEL(getTokenName(tokenMap, A.mintAddress))
     : ignoreToBalance || B.sufficientBalance()
     ? action
-    : INSUFFICIENT_FUNDS_LABEL(getTokenName(env, B.mintAddress));
+    : INSUFFICIENT_FUNDS_LABEL(getTokenName(tokenMap, B.mintAddress));
 };
