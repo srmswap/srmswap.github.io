@@ -35,7 +35,7 @@ export const PoolOverview = () => {
         {owned.map((o) => (
           <PoolCard pool={o.pool} />
         ))}
-        {!connected && <h3>Connect to a wallet to view your liquidity.</h3>}
+        {!connected && <h3>请连接钱包查看您的做市</h3>}
       </div>
     </>
   );

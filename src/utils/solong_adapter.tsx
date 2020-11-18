@@ -27,8 +27,8 @@ export class SolongAdapter extends EventEmitter {
 
     if ((window as any).solong === undefined) {
       notify({
-        message: "Solong Error",
-        description: "Please install solong wallet from Chrome ",
+        message: "Solong wallet 报错",
+        description: "请先在Chrome安装solong wallet插件，或在设置中选择其他钱包。",
       });
       return;
     }

@@ -48,7 +48,7 @@ export const PoolCard = (props: { pool: PoolInfo }) => {
     <>
       <div className="pool-card-row">
         <Text type="secondary" className="pool-card-cell ">
-          Your liquidity:
+          您的做市:
         </Text>
         <div className="pool-card-cell ">
           <div className="left">
@@ -70,13 +70,13 @@ export const PoolCard = (props: { pool: PoolInfo }) => {
       </div>
       <div className="pool-card-row">
         <Text type="secondary" className="pool-card-cell ">
-          Your quantity:
+          您的份数:
         </Text>
         <div className="pool-card-cell ">{ratio * enriched.supply}</div>
       </div>
       <div className="pool-card-row">
         <Text type="secondary" className="pool-card-cell ">
-          Your fees (24h):
+          您的收益 (24h):
         </Text>
         <div className="pool-card-cell " title={`${enriched.fees24h * ratio}`}>
           {enriched.fees24h * ratio < 0.005 ? "< " : ""}
@@ -105,7 +105,7 @@ export const PoolCard = (props: { pool: PoolInfo }) => {
       {userInfo}
       <div className="pool-card-row">
         <Text type="secondary" className="pool-card-cell ">
-          Pool Liquidity:
+          资金池:
         </Text>
         <div className="pool-card-cell ">
           <div className="left">
@@ -125,7 +125,7 @@ export const PoolCard = (props: { pool: PoolInfo }) => {
       </div>
       <div className="pool-card-row">
         <Text type="secondary" className="pool-card-cell ">
-          LP Supply:
+          LP供应量:
         </Text>
         <div className="pool-card-cell " title={enriched.supply}>
           {formatNumber.format(enriched.supply)}
@@ -133,7 +133,7 @@ export const PoolCard = (props: { pool: PoolInfo }) => {
       </div>
       <div className="pool-card-row">
         <Text type="secondary" className="pool-card-cell ">
-          Value per token:
+          每代币价值:
         </Text>
         <div className="pool-card-cell ">
           {formatUSD.format(enriched.liquidity / enriched.supply)}
@@ -142,7 +142,7 @@ export const PoolCard = (props: { pool: PoolInfo }) => {
 
       <div className="pool-card-row">
         <Text type="secondary" className="pool-card-cell ">
-          Volume (24h):
+          交易量 (24h):
         </Text>
         <div className="pool-card-cell ">
           {formatUSD.format(enriched.volume24h)}
@@ -150,7 +150,7 @@ export const PoolCard = (props: { pool: PoolInfo }) => {
       </div>
       <div className="pool-card-row">
         <Text type="secondary" className="pool-card-cell ">
-          Fees (24h):
+          收益 (24h):
         </Text>
         <div className="pool-card-cell ">
           {formatUSD.format(enriched.fees24h)}
@@ -158,7 +158,7 @@ export const PoolCard = (props: { pool: PoolInfo }) => {
       </div>
       <div className="pool-card-row">
         <Text type="secondary" className="pool-card-cell ">
-          Approx. APY (24h):
+          预估APY (24h):
         </Text>
         <div className="pool-card-cell ">
           {formatPct.format(enriched.apy24h)}
@@ -166,7 +166,7 @@ export const PoolCard = (props: { pool: PoolInfo }) => {
       </div>
       <div className="pool-card-row">
         <Text type="secondary" className="pool-card-cell ">
-          Address:
+          地址:
         </Text>
         <div className="pool-card-cell ">
           <div className="left">
