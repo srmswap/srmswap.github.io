@@ -50,6 +50,7 @@ export const ExchangeView = (props: {}) => {
       <Card
         className="exchange-card"
         headStyle={{ padding: 0 }}
+        bodyStyle={{ position: "relative" }}
         tabList={tabList}
         tabProps={{
           tabBarGutter: 0,
