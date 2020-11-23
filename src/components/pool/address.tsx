@@ -95,7 +95,7 @@ export const AdressesPopover = (props : {
 
   return <Popover
     placement="topRight"
-    title={"Addresses"}
+    title={"地址"}
     trigger="hover"
     content={
       <>
