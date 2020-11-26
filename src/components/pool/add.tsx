@@ -224,7 +224,7 @@ export const PoolPrice = (props: { pool: PoolInfo }) => {
       style={{ borderRadius: 20, width: "100%" }}
       bodyStyle={{ padding: "7px" }}
       size="small"
-      title="Prices and pool share"
+      title="价格与做市占比"
     >
       <Row style={{ width: "100%" }}>
         <Col span={8}>
@@ -249,7 +249,7 @@ export const PoolPrice = (props: { pool: PoolInfo }) => {
         <Col span={8}>
           {enriched.names[1]} per {enriched.names[0]}
         </Col>
-        <Col span={8}>Share of pool</Col>
+        <Col span={8}>做市占比</Col>
       </Row>
     </Card>
   );
@@ -282,7 +282,7 @@ export const YourPosition = (props: { pool?: PoolInfo }) => {
       style={{ borderRadius: 20, width: "100%" }}
       bodyStyle={{ padding: "7px" }}
       size="small"
-      title="Your Position"
+      title="您的做市"
     >
       <div className="pool-card" style={{ width: "initial" }}>
         <div className="pool-card-row">
@@ -297,7 +297,7 @@ export const YourPosition = (props: { pool?: PoolInfo }) => {
           </div>
         </div>
         <div className="pool-card-row" style={{ margin: 0 }}>
-          <div className="pool-card-cell">Your Share:</div>
+          <div className="pool-card-cell">做市占比:</div>
           <div className="pool-card-cell">
             {ratio * 100 < 0.001 && ratio > 0 ? "<" : ""}
             {formatPriceNumber.format(ratio * 100)}%

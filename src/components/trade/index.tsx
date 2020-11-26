@@ -198,7 +198,7 @@ export const TradeInfo = (props: {
     if(B.amount) {
       const minAmountOut = parseFloat(B?.amount) * (1 - slippage);
       setAmountOut(minAmountOut);
-      setMaxMinLabelOut("Minimun Received");
+      setMaxMinLabelOut("最少获取");
     }
     // else if(A.amount && lastTypedAccount === B.mintAddress) {
     //   const maxAmountOut = ;
@@ -241,7 +241,7 @@ export const TradeInfo = (props: {
     <div className="pool-card" style={{width: "initial"}}>
       <div className="pool-card-row">
         <Text className="pool-card-cell" >
-          Price
+          兑换比率
         </Text>
         <div className="pool-card-cell " title={exchangeRate.toString()}>
            <Button
@@ -251,9 +251,8 @@ export const TradeInfo = (props: {
             icon={<SwapOutlined />}
             onClick={handleSwapPriceInfo}
           >
-            { exchangeRate.toFixed(6) }&nbsp;
-            {priceAccount === B.mintAddress ? B.name : A.name} per&nbsp;
-            {priceAccount === B.mintAddress ? A.name : B.name}&nbsp;
+            1&nbsp;{priceAccount === B.mintAddress ? A.name : B.name}&nbsp;=&nbsp;{ exchangeRate.toFixed(6) }&nbsp;
+            {priceAccount === B.mintAddress ? B.name : A.name}
           </Button>
         </div>
       </div>
@@ -263,8 +262,7 @@ export const TradeInfo = (props: {
             trigger="hover"
             content={
               <div style={{ width: 300 }}>
-                You transaction will revert if there is a large, unfavorable price
-                movement before it is confirmed.
+                你的交易将会回滚，如果在确认前有很大的价格变化
               </div>
             }
           >
@@ -281,12 +279,11 @@ export const TradeInfo = (props: {
             trigger="hover"
             content={
               <div style={{ width: 300 }}>
-               The difference between the market price and
-               estimated price due to trade size.
+               根据交易量的多少，成交价与市价的差异
               </div>
             }
           >
-            Price Impact <QuestionCircleOutlined />
+            价格滑点 <QuestionCircleOutlined />
           </Popover>
         </Text>
         <div className="pool-card-cell " title={priceImpact.toString()}>
@@ -299,12 +296,11 @@ export const TradeInfo = (props: {
             trigger="hover"
             content={
               <div style={{ width: 300 }}>
-               A portion of each trade ({LIQUIDITY_PROVIDER_FEE * 100}%)
-               goes to liquidity providers as a protocol incentive.
+               每笔交易的 {LIQUIDITY_PROVIDER_FEE * 100}% 作为协议激励发放给流动性做市商
               </div>
             }
           >
-            Liquidity Provider Fee <QuestionCircleOutlined />
+            手续费 <QuestionCircleOutlined />
           </Popover>
         </Text>
         <div className="pool-card-cell " title={lpFee.toString()}>
