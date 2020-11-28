@@ -240,7 +240,7 @@ export const sendTransaction = async (
     if (status?.err) {
       const errors = await getErrorForTransaction(connection, txid);
       notify({
-        message: "Transaction failed...",
+        message: "交易失败...",
         description: (
           <>
             {errors.map((err) => (

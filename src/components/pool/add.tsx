@@ -83,8 +83,8 @@ export const AddToLiquidity = () => {
               console.log("Transaction failed", e);
               notify({
                 description:
-                  "Please try again and approve transactions from your wallet",
-                message: "Adding liquidity cancelled.",
+                  "请重试",
+                message: "做市被取消",
                 type: "error",
               });
               setPendingTx(false);

@@ -5,8 +5,8 @@ export const CREATE_POOL_LABEL = "创建流动性池";
 export const INSUFFICIENT_FUNDS_LABEL = (tokenName: string) =>
   `您的 ${tokenName} 余额不足`;
 export const POOL_NOT_AVAILABLE = (tokenA: string, tokenB: string) =>
-  `当前 ${tokenA}/${tokenB} 暂时无人做市`;
-export const ADD_LIQUIDITY_LABEL = "提供流动性";
+  `当前 ${tokenA}/${tokenB} 暂无人做市`;
+export const ADD_LIQUIDITY_LABEL = "做市";
 export const SWAP_LABEL = "兑换";
 export const CONNECT_LABEL = "连接钱包";
 export const SELECT_TOKEN_LABEL = "选择代币";

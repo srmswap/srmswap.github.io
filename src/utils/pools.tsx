@@ -678,7 +678,7 @@ async function _addLiquidityExistingPool(
   );
 
   notify({
-    message: "做市已成功，交易愉快！",
+    message: "做市成功",
     type: "success",
     description: `Transaction - ${tx}`,
   });
@@ -1050,7 +1050,7 @@ async function _addLiquidityNewPool(
   );
 
   notify({
-    message: "Pool Funded. Happy trading.",
+    message: "Pool Funded. 做市成功",
     type: "success",
     description: `Transaction - ${tx}`,
   });

@@ -83,8 +83,8 @@ export const TradeEntry = () => {
       } catch {
         notify({
           description:
-            "Please try again and approve transactions from your wallet",
-          message: "Swap trade cancelled.",
+            "请检查您的钱包是否添加相关代币并重试",
+          message: "兑换交易被取消",
           type: "error",
         });
       } finally {

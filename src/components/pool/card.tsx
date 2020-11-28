@@ -70,7 +70,7 @@ export const PoolCard = (props: { pool: PoolInfo }) => {
       </div>
       <div className="pool-card-row">
         <Text type="secondary" className="pool-card-cell ">
-          您的份数:
+          您的供应量:
         </Text>
         <div className="pool-card-cell ">{ratio * enriched.supply}</div>
       </div>
