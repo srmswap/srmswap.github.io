@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "5bcbcc3a650c458c142402b89ab30e4a",
+    "revision": "631cbb26ad79a2919d3549e9641ed7d5",
     "url": "/srmswap.github.io/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/srmswap.github.io/static/css/2.b5a80ab8.chunk.css"
   },
   {
-    "revision": "e05ae4145613e9cc5f94",
+    "revision": "98073866fdc793f24139",
     "url": "/srmswap.github.io/static/css/main.0c0d81ee.chunk.css"
   },
   {
@@ -20,8 +20,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/srmswap.github.io/static/js/2.f71ef018.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "e05ae4145613e9cc5f94",
-    "url": "/srmswap.github.io/static/js/main.a3a2f17a.chunk.js"
+    "revision": "98073866fdc793f24139",
+    "url": "/srmswap.github.io/static/js/main.de49dfb4.chunk.js"
   },
   {
     "revision": "6ffa97aa0a9fab9bac01",
