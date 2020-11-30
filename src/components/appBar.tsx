@@ -12,7 +12,7 @@ export const AppBar = (props: { left?: JSX.Element; right?: JSX.Element }) => {
   const TopBar = (
     <div className="App-Bar">
       <div className="App-Bar-left">
-        <div className="App-logo" />
+        
         <Menu mode="horizontal" selectedKeys={[location.pathname]}>
           <Menu.Item key="/">
             <Link
@@ -20,7 +20,7 @@ export const AppBar = (props: { left?: JSX.Element; right?: JSX.Element }) => {
                 pathname: "/",
               }}
             >
-              SRMSwap
+              首页
             </Link>
           </Menu.Item>
           <Menu.Item key="/info">
@@ -29,32 +29,13 @@ export const AppBar = (props: { left?: JSX.Element; right?: JSX.Element }) => {
                 pathname: "/info",
               }}
             >
-              图表
+              统计
             </Link>
-          </Menu.Item>
-          <Menu.Item key="trade">
-            <a
-              href={"https://dex.projectserum.com"}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              交易
-              <sup>↗</sup>
-            </a>
-          </Menu.Item>
-          <Menu.Item key="help">
-            <a
-              href={"https://serum-academy.com/en/serum-swap/"}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              帮助
-              <sup>↗</sup>
-            </a>
           </Menu.Item>
         </Menu>
         {props.left}
       </div>
+      <div><p></p></div>
       <div className="App-Bar-right">
         <AccountInfo />
         {connected && (

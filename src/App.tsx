@@ -8,29 +8,17 @@ function App() {
     <div className="App">
       <div className="Banner">
         <div className="Banner-description">
-          SRMSwap暂未完成代码审计，请自行承担潜在风险。
+          SRMSwap暂未完成代码审计，请自行承担风险(需翻墙使用)。
         </div>
       </div>
       <Routes />
       <div className="social-buttons">
-        <GitHubButton
-          href="https://github.com/project-serum/oyster-swap"
-          data-color-scheme="no-preference: light; light: light; dark: light;"
-          data-icon="octicon-star"
-          data-size="large"
-          data-show-count={true}
-          aria-label="Star solana-labs/oyster-swap on GitHub"
+          微信：srmswap
+        <a
+          href="https://twitter.com/srmswap"
         >
-          Star
-        </GitHubButton>
-        <GitHubButton
-          href="https://github.com/project-serum/oyster-swap/fork"
-          data-color-scheme="no-preference: light; light: light; dark: light;"
-          data-size="large"
-          aria-label="Fork project-serum/oyster-swap on GitHub"
-        >
-          Fork
-        </GitHubButton>
+          Twitter:@srmswap
+        </a>
       </div>
     </div>
   );
