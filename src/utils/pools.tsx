@@ -38,6 +38,7 @@ import {
 const LIQUIDITY_TOKEN_PRECISION = 8;
 
 export const LIQUIDITY_PROVIDER_FEE = 0.003;
+export const SERUM_FEE = 0.0005;
 
 export const removeLiquidity = async (
   connection: Connection,
@@ -135,12 +136,29 @@ export const removeLiquidity = async (
     )
   );
 
+  const deleteAccount = liquidityAmount === account.info.amount.toNumber();
+  if (deleteAccount) {
+    instructions.push(
+      Token.createCloseAccountInstruction(
+        programIds().token,
+        account.pubkey,
+        authority,
+        wallet.publicKey,
+        []
+      )
+    );
+  }
+
   let tx = await sendTransaction(
     connection,
     wallet,
     instructions.concat(cleanupInstructions),
     signers
   );
+
+  if(deleteAccount) {
+    cache.deleteAccount(account.pubkey);
+  }
 
   notify({
     message: "流动性资产已取回，感谢您的支持！",
@@ -172,7 +190,7 @@ export const swap = async (
   const minAmountOut = components[1].amount * (1 - SLIPPAGE);
   const holdingA =
     pool.pubkeys.holdingMints[0]?.toBase58() ===
-    components[0].account.info.mint.toBase58()
+      components[0].account.info.mint.toBase58()
       ? pool.pubkeys.holdingAccounts[0]
       : pool.pubkeys.holdingAccounts[1];
   const holdingB =
@@ -227,14 +245,14 @@ export const swap = async (
 
   let hostFeeAccount = SWAP_HOST_FEE_ADDRESS
     ? findOrCreateAccountByMint(
-        wallet.publicKey,
-        SWAP_HOST_FEE_ADDRESS,
-        instructions,
-        cleanupInstructions,
-        accountRentExempt,
-        pool.pubkeys.mint,
-        signers
-      )
+      wallet.publicKey,
+      SWAP_HOST_FEE_ADDRESS,
+      instructions,
+      cleanupInstructions,
+      accountRentExempt,
+      pool.pubkeys.mint,
+      signers
+    )
     : undefined;
 
   // swap
@@ -333,7 +351,7 @@ export const usePools = () => {
             data: undefined as any,
             account: item.account,
             pubkey: item.pubkey,
-            init: async () => {},
+            init: async () => { },
           };
 
           // handling of legacy layout can be removed soon...

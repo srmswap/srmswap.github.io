@@ -33,7 +33,7 @@ export const PoolOverview = () => {
       />
       <div className="pool-grid">
         {owned.map((o) => (
-          <PoolCard pool={o.pool} />
+          <PoolCard pool={o.pool} account={o.account} />
         ))}
         {!connected && <h3>请连接钱包查看您的做市</h3>}
       </div>
