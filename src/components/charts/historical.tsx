@@ -47,7 +47,7 @@ export const HistoricalVolume = React.memo(
       if (echartsRef.current) {
         echartsRef.current.setOption({
           title: {
-            text: `Historical Volume ${props.poolName}`,
+            text: `交易趋势 ${props.poolName}`,
             color: "#fff",
             textStyle: {
               color: "#fff",
@@ -70,7 +70,7 @@ export const HistoricalVolume = React.memo(
           xAxis: [
             {
               inverse: true,
-              name: "Date",
+              name: "日期",
               nameLocation: "middle",
               type: "category",
               data: volumeData.map((d) =>
@@ -80,7 +80,7 @@ export const HistoricalVolume = React.memo(
           ],
           yAxis: [
             {
-              name: "Volume",
+              name: "交易金额($)",
               type: "value",
               scale: true,
               splitLine: false,
@@ -135,7 +135,7 @@ export const HistoricalLiquidity = React.memo(
       if (echartsRef.current) {
         echartsRef.current.setOption({
           title: {
-            text: `Historical Liquidity ${props.poolName}`,
+            text: `做市趋势 ${props.poolName}`,
             color: "#fff",
             textStyle: {
               color: "#fff",
@@ -158,7 +158,7 @@ export const HistoricalLiquidity = React.memo(
           xAxis: [
             {
               inverse: true,
-              name: "Date",
+              name: "日期",
               nameLocation: "middle",
               type: "category",
               data: liquidityData.map((d) =>
@@ -168,7 +168,7 @@ export const HistoricalLiquidity = React.memo(
           ],
           yAxis: [
             {
-              name: "Liquidity",
+              name: "做市金额($)",
               type: "value",
               scale: true,
               splitLine: false,

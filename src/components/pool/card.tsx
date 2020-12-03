@@ -107,7 +107,7 @@ export const PoolCard = (props: { pool: PoolInfo; account?: TokenAccount }) => {
             trigger="hover"
             className="right-icon"
             content={
-              `Show ${displayMode === "card" ? "historical" : "current"} data`
+              `显示${displayMode === "card" ? "历史" : "当前"}数据`
             }
           >
             <Button
