@@ -13,7 +13,12 @@ function App() {
       </div>
       <Routes />
       <div className="social-buttons">
-          微信：srmswap
+        <a
+          href="https://weibo.com/u/5072467661"
+        >
+          微博:@srmswap
+        </a>      
+          | 微信：srmswap | 
         <a
           href="https://twitter.com/srmswap"
         >

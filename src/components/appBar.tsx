@@ -20,7 +20,16 @@ export const AppBar = (props: { left?: JSX.Element; right?: JSX.Element }) => {
                 pathname: "/",
               }}
             >
-              首页
+              兑换
+            </Link>
+          </Menu.Item>
+          <Menu.Item key="/add">
+            <Link
+              to={{
+                pathname: "/add",
+              }}
+            >
+              做市
             </Link>
           </Menu.Item>
           <Menu.Item key="/info">
