@@ -42,7 +42,7 @@ export interface MarketsContextState {
 const INITAL_LIQUIDITY_DATE = new Date("2020-10-27");
 const REFRESH_INTERVAL = 30_000;
 
-const BONFIDA_POOL_INTERVAL = 30 * 60_000; // 30 min
+export const BONFIDA_POOL_INTERVAL = 30 * 60_000; // 30 min
 
 const MarketsContext = React.createContext<MarketsContextState | null>(null);
 
@@ -472,6 +472,7 @@ function createEnrichedPools(
         id: index,
         name,
         names: mints.map((m) => getTokenName(tokenMap, m)),
+        accounts: [accountA?.pubkey, accountB?.pubkey],
         address: p.pubkeys.mint.toBase58(),
         link,
         mints,

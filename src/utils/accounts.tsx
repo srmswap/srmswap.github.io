@@ -1,4 +1,4 @@
-import React, { useCallback, useContext, useEffect, useState } from "react";
+import React, { useCallback, useContext, useEffect, useMemo, useState } from "react";
 import { useConnection } from "./connection";
 import { useWallet } from "./wallet";
 import { AccountInfo, Connection, PublicKey } from "@solana/web3.js";
@@ -326,6 +326,15 @@ const UseNativeAccount = () => {
     });
   }, [setNativeAccount, wallet, wallet.publicKey, connection]);
 
+  useEffect(() => {
+    const account = wrapNativeAccount(wallet.publicKey, nativeAccount);
+    if(!account) {
+      return;
+    }
+
+    accountsCache.set(account.pubkey.toBase58(), account);
+  }, [wallet.publicKey, nativeAccount]);
+
   return { nativeAccount };
 };
 
@@ -489,14 +498,16 @@ export const getMultipleAccounts = async (
   const array = result
     .map(
       (a) =>
-        a.array.filter(acc => !!acc).map((acc) => {
-          const { data, ...rest } = acc;
-          const obj = {
-            ...rest,
-            data: Buffer.from(data[0], "base64"),
-          } as AccountInfo<Buffer>;
-          return obj;
-        }) as AccountInfo<Buffer>[]
+        a.array
+          .filter((acc) => !!acc)
+          .map((acc) => {
+            const { data, ...rest } = acc;
+            const obj = {
+              ...rest,
+              data: Buffer.from(data[0], "base64"),
+            } as AccountInfo<Buffer>;
+            return obj;
+          }) as AccountInfo<Buffer>[]
     )
     .flat();
   return { keys, array };
@@ -609,10 +620,16 @@ export function useAccount(pubKey?: PublicKey) {
   return account;
 }
 
-export function useCachedPool() {
+export function useCachedPool(legacy = false) {
   const context = useContext(AccountsContext);
+
+  const allPools = context.pools as PoolInfo[];
+  const pools = useMemo(() => {
+    return allPools.filter(p => p.legacy === legacy);
+  }, [allPools, legacy]);
+
   return {
-    pools: context.pools as PoolInfo[],
+    pools,
   };
 }
 
