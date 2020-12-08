@@ -234,10 +234,9 @@ export const TradeInfo = (props: { pool?: PoolInfo }) => {
             type="text"
             icon={<SwapOutlined />}
             onClick={handleSwapPriceInfo}
-          >
-            {exchangeRate.toFixed(6)}&nbsp;
-            {priceAccount === B.mintAddress ? B.name : A.name} per&nbsp;
-            {priceAccount === B.mintAddress ? A.name : B.name}&nbsp;
+          >            
+            1 {priceAccount === B.mintAddress ? A.name : B.name}&nbsp;
+            = {exchangeRate.toFixed(6)}&nbsp; {priceAccount === B.mintAddress ? B.name : A.name}
           </Button>
         </div>
       </div>

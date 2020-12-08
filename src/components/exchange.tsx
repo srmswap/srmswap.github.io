@@ -12,14 +12,14 @@ export const ExchangeView = (props: {}) => {
   const tabList = [
     {
       key: "trade",
-      tab: <div style={tabStyle}>Trade</div>,
+      tab: <div style={tabStyle}>兑换</div>,
       render: () => {
         return <TradeEntry />;
       },
     },
     {
       key: "pool",
-      tab: <div style={tabStyle}>Pool</div>,
+      tab: <div style={tabStyle}>做市</div>,
       render: () => {
         return <AddToLiquidity />;
       },
