@@ -24,6 +24,12 @@ function App() {
         >
           Twitter:@srmswap
         </a>
+          | 
+        <a
+          href="https://explorer.solana.com/"
+        >
+          区块链浏览器
+        </a>          
       </div>
     </div>
   );
