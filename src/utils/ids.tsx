@@ -47,20 +47,17 @@ export const PROGRAM_IDS = [
         pubkey: new PublicKey("2n2dsFSgmPcZ8jkmBZLGUM2nzuFqcBGQ3JEEj6RJJcEg"),
         layout: TokenSwapLayoutV1,
       },
-      legacy: [
-      ],
+      legacy: [],
     }),
   },
   {
     name: "devnet",
     swap: () => ({
       current: {
-        pubkey: new PublicKey("F1AnTSnT3x3ZxyLzeVDuEa7Uq8jXr92gaa7xUwg5QSxT"),
+        pubkey: new PublicKey("6Cust2JhvweKLh4CVo1dt21s2PJ86uNGkziudpkNPaCj"),
         layout: TokenSwapLayout,
       },
-      legacy: [
-        new PublicKey("BSfTAcBdqmvX5iE2PW88WFNNp2DHhLUaBKk5WrnxVkcJ"),
-      ],
+      legacy: [new PublicKey("BSfTAcBdqmvX5iE2PW88WFNNp2DHhLUaBKk5WrnxVkcJ")],
     }),
   },
   {
