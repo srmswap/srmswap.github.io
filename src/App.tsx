@@ -12,25 +12,30 @@ function App() {
         </div>
       </div>
       <Routes />
-      <div className="social-buttons">
+      <div className="out-links">
         <a
-          href="https://weibo.com/u/5072467661"
+          href="https://www.sollet.io/"
         >
-          微博:@srmswap
-        </a>      
-          | 微信：srmswap | 
-        <a
-          href="https://twitter.com/srmswap"
-        >
-          Twitter:@srmswap
-        </a>
-          | 
+          Sollet钱包  
+        </a>  
+           &nbsp;|&nbsp;      
         <a
           href="https://explorer.solana.com/"
         >
           Solana 区块链浏览器
         </a>          
       </div>
+      <div className="social-buttons">
+          微博:@srmswap   
+          &nbsp;|&nbsp;  
+          微信：srmswap 
+          &nbsp;|&nbsp;  
+        <a
+          href="https://twitter.com/srmswap"
+        >
+          Twitter:@srmswap
+        </a>         
+      </div>	      
     </div>
   );
 }
