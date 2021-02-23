@@ -8,7 +8,7 @@ function App() {
     <div className="App">
       <div className="Banner">
         <div className="Banner-description">
-          SRMSwap暂未完成代码审计，请自行承担风险(需翻墙使用)。
+          请自行承担风险(需翻墙使用)
         </div>
       </div>
       <Routes />
