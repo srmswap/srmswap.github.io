@@ -78,7 +78,7 @@ export function ConnectionProvider({ children = undefined as any }) {
     // fetch token files
     window
       .fetch(
-        `https://cdn.jsdelivr.net/gh/solana-labs/token-list@main/src/tokens/${env}.json`
+        `https://cdn.jsdelivr.net/gh/solana-labs/token-list@e04a122/src/tokens/${env}.json`
       )
       .then((res) => {
         return res.json();
