@@ -12,6 +12,13 @@ function App() {
         </div>
       </div>
       <Routes />
+      <div className="bottom-1">          
+        <a
+          href="https://ftx.com/#a=srmswap"
+        >
+          通过 FTX.com 购买 $SOL 
+        </a>  
+      </div>
       <div className="out-links">
         <a
           href="https://www.sollet.io/"
