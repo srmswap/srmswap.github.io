@@ -17,7 +17,8 @@ function App() {
           href="https://ftx.com/#a=srmswap"
         >
           通过 FTX.com 购买 $SOL 
-        </a>  
+        </a>
+          &nbsp;(提币免费)  
       </div>
       <div className="out-links">
         <a
